@@ -158,7 +158,7 @@ void showHand(int player, ptrPlayer head_players) {
     pointer iter = iterP->hand;
     int x = 1;
 
-    while (iter != NULL) {
+     for (int i = 0; i < length(iterP->hand); i++) {
         if (strcmp(iter->color, "Red") == 0) {
             printf(ANSI_COLOR_RED "%d) %s %s\t" ANSI_COLOR_RESET, x, iter->color, iter->value);
         } else if (strcmp(iter->color, "Green") == 0) {
@@ -173,6 +173,7 @@ void showHand(int player, ptrPlayer head_players) {
     }
 
     printf("\n");
+    return;
 }
 
 
